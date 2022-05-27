@@ -1,1 +1,0 @@
-MsgBox "Damit diese Einstellung wirksam wird, muss der Assistent neugestartet werden.",64+0,"Settings"

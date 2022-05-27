@@ -1,1 +1,0 @@
-MsgBox "Die angegebene Datei/der angegebene Pfad wurde nicht gefunden.",16+0,"Suche - Fehler"

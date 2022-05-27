@@ -1,1 +1,0 @@
-MsgBox "Das Terminal wurde disabled.",64+0,"Socke"

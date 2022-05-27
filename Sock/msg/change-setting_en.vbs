@@ -1,1 +1,0 @@
-MsgBox "For this setting to take effect, you must restart the assistant.",64+0,"Settings"

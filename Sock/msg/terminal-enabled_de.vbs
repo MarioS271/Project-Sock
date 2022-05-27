@@ -1,1 +1,0 @@
-MsgBox "Das Terminal wurde enabled! Du kannst es vom Socke-Menue aus mit T oeffnen.",64+01,"Socke"
