@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<meta http-equiv="x-ua-compatible" content="ie=9">
+<html>
+<head>
+    <meta charset="utf-8">
+    <TITLE>Socke</TITLE>
+    <hta:application ID="oHTA"
+    applicationname="sock_window-en"
+     BORDER="thin"
+	 borderstyle="normal"
+     selection="no"
+     scroll="no"
+	 singleinstance="yes"
+	 minimizebutton="no"
+	 maximizebutton="no"
+	 icon="%userprofile%\Assistants\Sock\ico\assistant_ICON.ico"
+     showInTaskBar="no"
+    >
+    <script type="text/javascript" language="JScript">
+    function start(exe) {
+    var WshShell = new ActiveXObject("WScript.Shell");
+    WshShell.Run(exe);
+    }
+</script>
+</head>
+</html>
+<script>resizeTo(0,0);window.offscreenBuffering = "true";</script>
+<html>
+<style>
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+}
+body{
+    background-image: url("sock.png");
+    background-color: White;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: Black;
+}
+#btnArea {
+    position: absolute;
+    right: 0px;
+}
+</style>
+
+
+<script>
+
+if(screen.availWidth >= 2000){
+    sizeX=600;
+} else {
+    sizeX=480;
+};
+if(screen.availHeight >= 1800){
+    sizeY=600;
+} else {
+    sizeY=480;
+}
+
+maxX=screen.availWidth-sizeX;
+maxY=screen.availHeight-sizeY;
+
+x=maxX-2;
+y=maxY-2;
+
+
+function init(){
+    moveTo(x,y);
+    resizeTo(sizeX,sizeY);
+};
+
+
+</script>
+
+
+<body onload="init()">
+
+<div id="btnArea">
+<button type="button" onclick="start('sock_menu-de.lnk')">Assistenten-Menü</button>
+<button type="button" onclick="start('help_dialouge-de.lnk')">Hilfe</button>
+</div>
+
+
+</body>
+</html>

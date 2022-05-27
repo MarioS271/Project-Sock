@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<script>resizeTo(0,0);window.offscreenBuffering = "true";</script>
+<title>Food</title>
+<hta:application ID="oHTA" 
+applicationname="foodwindow"
+BORDER="none"
+selection="no"
+scroll="no"
+icon="%userprofile%\Assistants\Sock\ico\assistant_ICON.ico"
+showInTaskBar="no"  
+>
+<html>
+<style>
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+}
+body{
+  background-image: url("food.png");
+  background-color: White;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+}
+</style>
+
+<script>
+var timer,z,c,dX,dY,tOut;
+x=window.screenLeft;
+y=window.screenLeft;
+size=100;
+maxMove=5;
+cps=1000/30;
+maxX=screen.availWidth-size;
+maxY=screen.availHeight-size;
+
+function init(){
+  resizeTo(size,size);
+  moveTo(x,y);
+  randomTOut()
+  flee()
+  closeDetect()
+  closeDetect()
+};
+
+function randomTOut(){
+  tOut=(Math.round((Math.random())*480)+20)*10;
+  moveControl();
+  timer=setTimeout(function(){randomTOut()},tOut);
+};
+
+function moveControl(){
+  dX=Math.round(Math.random()*maxMove*2-maxMove);
+  dY=Math.round(Math.random()*maxMove*2-maxMove);
+};
+
+function flee(){
+  z=setInterval(function(){
+    if (x>0) {x+=dX;} else {dX=Math.abs(dX);x+=dX;};
+    if (y>0) {y+=dY;} else {dY=Math.abs(dY);y+=dY;};
+    if (x<maxX) {x+=dX;} else {dX=-Math.abs(dX);x+=dX;};
+    if (y<maxY) {y+=dY;} else {dY=-Math.abs(dY);y+=dY;};
+    moveTo(x,y);
+  }, cps);
+};
+
+function closeDetect(){
+  c=setInterval(function(){
+    testForCloseEvent()
+  }, 1);
+};
+
+function closeW(){
+  clearTimeout(timer);
+  clearInterval(z);
+  clearInterval(c);
+  close()
+};
+</script>
+<script type="text/vbscript">
+Function testForCloseEvent()
+  Dim testFile, objFSO
+  Set objFSO = CreateObject("Scripting.FileSystemObject")
+
+  If (objFSO.FileExists("end.dat")) Then 
+  window.close()
+  End If
+End Function
+</script>
+<body onload="init()">
+  <button type="button" id="btn" autofocus onclick="closeW()">Sammeln</button>
+</body>
+</html>

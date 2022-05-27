@@ -1,0 +1,1 @@
+MsgBox "Der Timer ist abgelaufen!",64+0,"Timer"

@@ -1,0 +1,2 @@
+MsgBox "Achtung: Wenn du Socke deinstallierst, wird die ganze Information von Socke verloren gehen.",48+0,"Deinstallation - Warnung"
+MsgBox "Bitte schliesse alle Programme von Socke, die noch laufen (z.B. Catch the Food, Uhr,...)!",48+0,"Deinstallation - Warnung"

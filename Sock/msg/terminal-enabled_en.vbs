@@ -1,0 +1,1 @@
+MsgBox "The terminal got enabled! You can open it by pressing T at the Sock menu.",64+0,"Sock"

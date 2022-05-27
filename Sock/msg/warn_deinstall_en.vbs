@@ -1,0 +1,2 @@
+MsgBox "Warning: If you deinstall Sock, all its information will be gone!",48+0,"Deinstallation - Warning"
+MsgBox "Please close all programs form Sock that are running (f.e. Catch the Food, Clock,...)!",48+0,"Deinstallation - Warning"
