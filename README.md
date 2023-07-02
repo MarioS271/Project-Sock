@@ -4,4 +4,4 @@ This is my project Sock. It is an interactive assistant. This project is written
 ### You can find all releases under the [releases](https://github.com/MarioS271/Project-Sock/releases) section.
 ### Also, check out the [english](https://sock.marios271.net/en/) or [german](https://sock.marios271.net/de/) website.
 
-NOTE: The Source code zip/tar.gz are not actually the code (just this file), so just use the installer instead. ;)
+NOTE: The Source code zip/tar.gz are not actually the code (just this file and the utilities), so just use the installer instead. ;)
